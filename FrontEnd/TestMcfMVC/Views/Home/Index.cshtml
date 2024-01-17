@@ -1,0 +1,57 @@
+﻿@model TestMcfMVC.Models.LocationModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="Home" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="inputData">Agreement Number</label>
+        <input type="text" class="form-control" id="agreement_number" name="agreement_number" placeholder="Agreement Number">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">Branch Id</label>
+        <input type="text" class="form-control" id="branch_id" name="branch_id" placeholder="Branch Id">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">No. BPKB</label>
+        <input type="text" class="form-control" id="bpkb_no" name="bpkb_no" placeholder="No. BPKB">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">Tanggal BPKB in</label>
+        <input type="date" class="form-control" id="bpkb_date_in" name="bpkb_date_in" placeholder="Tanggal BPKB in">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">Tanggal BPKB</label>
+        <input type="date" class="form-control" id="bpkb_date" name="bpkb_date" placeholder="Tanggal BPKB">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">No. Faktur</label>
+        <input type="text" class="form-control" id="faktur_no" name="faktur_no" placeholder="No. Faktur">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">Tanggal Faktur</label>
+        <input type="date" class="form-control" id="faktur_date" name="faktur_date" placeholder="No. Faktur">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="inputData">Nomor Polisi</label>
+        <input type="text" class="form-control" id="police_no" name="police_no" placeholder="Nomor Polisi">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="location_id">Lokasi Penyimpanan</label>
+        <select asp-for="location_id" asp-items="Model.location_name_list" class="form-control"></select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+</form>
